@@ -1,9 +1,3 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
 @import url('./reset.css');
 @import url('./vite-promo.css');
 @import url('./header.css');
@@ -22,4 +16,144 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+header {
+  background-color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+#search-form {
+  display: inline-block;
+}
+
+#search-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type='submit'] {
+  padding: 8px 16px;
+  font-size: 1rem;
+  color: white;
+  background: #4e75ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  width: 91px;
+  height: 40px;
+  transition: background-color 0.3s;
+}
+
+button[type='submit']:hover {
+  background-color: #3b5dcc;
+}
+
+/* Стилі для галереї */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 1rem;
+}
+
+.gallery__item {
+  border: 1px solid #808080;
+  width: 360px;
+  height: 200px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 8px;
+}
+
+.gallery__item img {
+  display: block;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.gallery__item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  padding: 0.25rem 0;
+  font-size: 0.875rem;
+  color: #555;
+  display: inline-block;
+  width: 22%;
+  text-align: center;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #007bff;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.load-more {
+  display: block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 32px auto;
+  width: 125px;
+  height: 40px;
+  text-align: center;
+}
+.load-more:hover {
+  background-color: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+.end-of-collection {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  color: #ff0000;
+  margin: 20px 0;
 }
